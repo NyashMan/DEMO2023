@@ -214,9 +214,9 @@ systemctl enable isc-dhcp-server
 Таблица №2
 | Логин  | Пароль | Примечание  |
 | ------------- | ------------- | ------------- |
-| Admin  | P@ssw0rd  | CLI HQ-SRV HQ-R  |
-| Branch admin  | P@ssw0rd  | BR-SRV BR-R  |
-| Network admin  | P@ssw0rd  | HQ-R BR-R BR-SRV  |
+| Admin  | P@ssw0rd  | CLI HQ-SRV HQ-R |
+| Branch admin  | P@ssw0rd  | BR-SRV BR-R |
+| Network admin  | P@ssw0rd  | HQ-R BR-R BR-SRV |
 
 ## **CLI**
 ![image](https://github.com/NyashMan/DEMO2023/assets/1348639/2733e0ed-097a-4479-a11e-190c5b81f6cf)
