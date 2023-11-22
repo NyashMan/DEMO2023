@@ -12,4 +12,12 @@ Step-by-step guide for DEMO 2023-2024| WIP
 a. Присвоить имена в соответствии с топологией
 
 ![image](https://github.com/NyashMan/DEMO2023/assets/1348639/14dd2b7a-02d9-4e57-849b-962872157b0b)
-
+### ISP
+```
+su -
+toor
+nano /etc/hostname
+ISP
+Нажать: ctrl-x
+Нажать: y
+```
