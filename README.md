@@ -10,7 +10,8 @@ Step-by-step guide for DEMO 2023-2024| WIP
 ## **Задание 1 модуля 1** 
 **1.	Выполните базовую настройку всех устройств:**
 **a.	Присвоить имена в соответствии с топологией:**
-![image](https://github.com/NyashMan/DEMO2023/assets/1348639/f1bffd00-dfbb-4812-aae3-00f00e490c49)
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/7b6fb5ab-5c65-4058-bb84-afc10982dcac)
+
 
 ### **ISP**
 ```
@@ -129,7 +130,8 @@ su -
 toor
 nano /etc/sysctl.conf
 ```
-![image](https://github.com/NyashMan/DEMO2023/assets/1348639/8368bfdf-5c65-497b-b42e-e2737bee8f7c)
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/cb3edc27-d840-4207-a417-18741d71c650)
+
 ```
 ctrl-x
 y
@@ -191,18 +193,24 @@ systemctl restart frr
 ## HQ-R
 ```
 nano /etc/default/isc-dhcp-server
+```
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/7a69036d-24db-440e-95a7-31ecb03b3a90)
 
-![image](https://github.com/NyashMan/DEMO2023/assets/1348639/b1e54a9d-f5f3-4435-866f-a75b6a02bb9d)
+```
 ctrl-x
 y
 nano /etc/dhcp/dhcpd.conf
-![image](https://github.com/NyashMan/DEMO2023/assets/1348639/efd64fdb-f88b-4043-8254-77314387a3e9)
-![image](https://github.com/NyashMan/DEMO2023/assets/1348639/deb9054e-a853-4f3e-a524-cbcf4e1ec4b7)
 ```
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/d30e9ac4-27d3-4abb-9e6e-e3ab41a9ed28)
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/d4fecaab-3776-4d4f-bd27-56a66736c241)
+
 **a.	Учтите, что у сервера должен быть зарезервирован адрес.**
 ```
 nano /etc/dhcp/dhcpd.conf
 hardware ethernet указывается MAC-адрес HQ-SRV
+```
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/aaddc443-9f67-4286-86d6-2e940047e912)
+```
 ctrl-x
 y
 systemctl start isc-dhcp-server
@@ -219,16 +227,16 @@ systemctl enable isc-dhcp-server
 | Branch admin     | P@ssw0rd       | BR-SRV BR-R      |
 | Network admin     | P@ssw0rd       | HQ-R BR-R BR-SRV      |
 ## **CLI**
-![image](https://github.com/NyashMan/DEMO2023/assets/1348639/2733e0ed-097a-4479-a11e-190c5b81f6cf)
-![image](https://github.com/NyashMan/DEMO2023/assets/1348639/17e0b12d-5049-405f-9d92-a987f6f07833)
-![image](https://github.com/NyashMan/DEMO2023/assets/1348639/9f851637-1de1-426b-9c98-25c30ba4deed)
-![image](https://github.com/NyashMan/DEMO2023/assets/1348639/1230a187-de3f-41e0-9edf-4386ec7c7e68)
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/c1d0c57c-46ed-4adf-b58d-56584960ba19)
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/08241d45-02a3-4b36-91d3-479fd11c5525)
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/309c22ab-4edf-4d60-bbf6-2720b0b1c931)
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/7cde267c-0f6c-42e1-b8e2-73427c329bb8)
 
 ## **HQ-SRV**
-![image](https://github.com/NyashMan/DEMO2023/assets/1348639/2733e0ed-097a-4479-a11e-190c5b81f6cf)
-![image](https://github.com/NyashMan/DEMO2023/assets/1348639/17e0b12d-5049-405f-9d92-a987f6f07833)
-![image](https://github.com/NyashMan/DEMO2023/assets/1348639/9f851637-1de1-426b-9c98-25c30ba4deed)
-![image](https://github.com/NyashMan/DEMO2023/assets/1348639/1230a187-de3f-41e0-9edf-4386ec7c7e68)
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/c1d0c57c-46ed-4adf-b58d-56584960ba19)
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/08241d45-02a3-4b36-91d3-479fd11c5525)
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/309c22ab-4edf-4d60-bbf6-2720b0b1c931)
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/7cde267c-0f6c-42e1-b8e2-73427c329bb8)
 
 ## **HQ-R**
 
@@ -241,10 +249,10 @@ P@ssw0rd
 
 ## **BR-SRV**
 
-![image](https://github.com/NyashMan/DEMO2023/assets/1348639/2733e0ed-097a-4479-a11e-190c5b81f6cf)
-![image](https://github.com/NyashMan/DEMO2023/assets/1348639/17e0b12d-5049-405f-9d92-a987f6f07833)
-![image](https://github.com/NyashMan/DEMO2023/assets/1348639/9f851637-1de1-426b-9c98-25c30ba4deed)
-![image](https://github.com/NyashMan/DEMO2023/assets/1348639/1230a187-de3f-41e0-9edf-4386ec7c7e68)
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/c1d0c57c-46ed-4adf-b58d-56584960ba19)
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/08241d45-02a3-4b36-91d3-479fd11c5525)
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/309c22ab-4edf-4d60-bbf6-2720b0b1c931)
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/7cde267c-0f6c-42e1-b8e2-73427c329bb8)
 
 ## **BR-R**
 
@@ -319,15 +327,18 @@ y
 ```
 nmtui
 ```
-![image](https://github.com/NyashMan/DEMO2023/assets/1348639/a91054c7-85aa-4a7f-a815-54088be61151)
-![image](https://github.com/NyashMan/DEMO2023/assets/1348639/53b24ffe-6ce5-47d3-b59d-6092ca89e4e3)
-![image](https://github.com/NyashMan/DEMO2023/assets/1348639/8c7d6301-f676-48b1-a227-78fac3079f91)
-![image](https://github.com/NyashMan/DEMO2023/assets/1348639/084cbc33-5f66-48ff-8b45-9e0bd87c4fa2)
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/76f37371-6e15-47d2-8221-887b43eb08e7)
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/9308b996-5283-480b-8643-aa04437562bb)
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/b69b2e51-deab-4930-9ce3-ca1382297a28)
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/245f306c-0fe7-4f11-a5dd-dd37d0258005)
+
 
 ## **BR-R**
 ```
 nmtui
 ```
-![image](https://github.com/NyashMan/DEMO2023/assets/1348639/bc821ba2-c330-488c-94e3-506c51817731)
-![image](https://github.com/NyashMan/DEMO2023/assets/1348639/5614ce50-207e-42fb-b3d3-af074b5b7a96)
-![image](https://github.com/NyashMan/DEMO2023/assets/1348639/28766437-39de-4040-a602-3c108021aad4)
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/777199e9-a63f-47b0-aef8-5a21f1d231ac)
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/67fdfae2-7c7a-4769-9f31-155ca3d50940)
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/b6e93e7f-948c-4ada-a8af-b79f822aa2d4)
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/1b13096a-fd7b-4328-b81d-e6924cb998b8)
+
