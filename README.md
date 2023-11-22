@@ -318,16 +318,16 @@ y
 ## **HQ-R**
 ```
 nmtui
+```
 ![image](https://github.com/NyashMan/DEMO2023/assets/1348639/a91054c7-85aa-4a7f-a815-54088be61151)
 ![image](https://github.com/NyashMan/DEMO2023/assets/1348639/53b24ffe-6ce5-47d3-b59d-6092ca89e4e3)
 ![image](https://github.com/NyashMan/DEMO2023/assets/1348639/8c7d6301-f676-48b1-a227-78fac3079f91)
 ![image](https://github.com/NyashMan/DEMO2023/assets/1348639/084cbc33-5f66-48ff-8b45-9e0bd87c4fa2)
-```
 
 ## **BR-R**
 ```
 nmtui
+```
 ![image](https://github.com/NyashMan/DEMO2023/assets/1348639/bc821ba2-c330-488c-94e3-506c51817731)
 ![image](https://github.com/NyashMan/DEMO2023/assets/1348639/5614ce50-207e-42fb-b3d3-af074b5b7a96)
 ![image](https://github.com/NyashMan/DEMO2023/assets/1348639/28766437-39de-4040-a602-3c108021aad4)
-```
