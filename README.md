@@ -130,11 +130,14 @@ toor
 nano /etc/sysctl.conf
 ```
 ![image](https://github.com/NyashMan/DEMO2023/assets/1348639/8368bfdf-5c65-497b-b42e-e2737bee8f7c)
+```
 ctrl-x
 y
 sysctl -p
+```
 
 ## **HQ-R**
+
 ```
 apt install frr
 nano /etc/frr/daemon
@@ -157,6 +160,7 @@ systemctl restart frr
 ```
 
 ## **BR-R**
+
 ```
 apt install frr
 nano /etc/frr/daemon
@@ -208,11 +212,11 @@ systemctl enable isc-dhcp-server
 
 4.	Настройте локальные учётные записи на всех устройствах в соответствии с таблицей 2.
 Таблица №2
-| Логин | Пароль |Примечание |
-| ------------- | ------------- |
-| Admin  | P@ssw0rd  |CLI HQ-SRV HQ-R |
-| Branch admin | P@ssw0rd  |BR-SRV BR-R |
-| Network admin | P@ssw0rd  |HQ-R BR-R BR-SRV |
+| Логин  | Пароль | Примечание  |
+| ------------- | ------------- | ------------- |
+| Admin  | P@ssw0rd  | CLI HQ-SRV HQ-R  |
+| Branch admin  | P@ssw0rd  | BR-SRV BR-R  |
+| Network admin  | P@ssw0rd  | HQ-R BR-R BR-SRV  |
 
 ## **CLI**
 ![image](https://github.com/NyashMan/DEMO2023/assets/1348639/2733e0ed-097a-4479-a11e-190c5b81f6cf)
