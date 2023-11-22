@@ -212,12 +212,11 @@ systemctl enable isc-dhcp-server
 
 4.	Настройте локальные учётные записи на всех устройствах в соответствии с таблицей 2.
 Таблица №2
-| Логин  | Пароль | Примечание |
-| ------------- | ------------- | ------------- |
-| Admin  | P@ssw0rd  | CLI HQ-SRV HQ-R |
-| Branch admin  | P@ssw0rd  | BR-SRV BR-R |
-| Network admin  | P@ssw0rd  | HQ-R BR-R BR-SRV |
-
+| Логин | Пароль | Примечание |
+| :---         |     :---:      |          ---: |
+| Admin   | P@ssw0rd     | CLI HQ-SRV HQ-R    |
+| Branch admin     | P@ssw0rd       | BR-SRV BR-R      |
+| Network admin     | P@ssw0rd       | HQ-R BR-R BR-SRV      |
 ## **CLI**
 ![image](https://github.com/NyashMan/DEMO2023/assets/1348639/2733e0ed-097a-4479-a11e-190c5b81f6cf)
 ![image](https://github.com/NyashMan/DEMO2023/assets/1348639/17e0b12d-5049-405f-9d92-a987f6f07833)
