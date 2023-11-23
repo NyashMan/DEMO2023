@@ -142,7 +142,7 @@ sysctl -p
 
 ```
 apt install frr
-nano /etc/frr/daemon
+nano /etc/frr/daemons
 меняем строчку
 ospfd=no на строчку
 ospfd=yes
@@ -155,8 +155,9 @@ router ospf
 network 10.0.0.0./26 area 0
 network 192.168.0.0/24 area 0
 network 172.16.0.0/24 area 0
-passive-interface ens160
-write
+int ens160
+ip ospf passive
+do write
 exit
 systemctl restart frr
 ```
@@ -165,7 +166,7 @@ systemctl restart frr
 
 ```
 apt install frr
-nano /etc/frr/daemon
+nano /etc/frr/daemons
 меняем строчку
 ospfd=no на строчку
 ospfd=yes
@@ -175,11 +176,12 @@ systemctl restart frr
 vtysh
 conf t
 router ospf
-network 10.0..0./26 area 0
+network 10.0.0.0./26 area 0
 network 192.168.1.0/24 area 0
 network 172.16.0.0/24 area 0
-passive-interface ens160
-write
+int ens160
+ip ospf passive
+do write
 exit
 systemctl restart frr
 ```
@@ -311,7 +313,34 @@ y
 ```
 
 **7.	Настройте подключение по SSH для удалённого конфигурирования устройства HQ-SRV по порту 2222. Учтите, что вам необходимо перенаправить трафик на этот порт посредством контролирования трафика.**
+## **HQ-SRV**
+```
+nano /etc/ssh/sshd_config
+```
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/2fb9a0c0-4f12-44e6-aff3-3866c10ed23f)
 
+```
+ctrl-x
+y
+systemctl restart sshd
+```
+## **HQ-R**
+  
+```
+systemctl enable --now nftables
+nft flush ruleset
+nft add table inet nat
+nft add chain inet nat prerouting '{ type nat hook prerouting priority 0; }'
+nft add rule inet nat prerouting ip daddr 192.168.0.2 tcp dport 22 dnat to 10.0.0.1:2222
+nft list ruleset
+```
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/4bb7bb1f-e2bd-4465-94b5-239bb86f283f)
+```
+echo "flush ruleset" >> /etc/nftables/nftables.nft
+nft -s list ruleset >> /etc/nftables.conf
+nft -f /etc/nftables.conf
+systemctl restart nftables
+```
 
 **8.	Настройте контроль доступа до HQ-SRV по SSH со всех устройств, кроме CLI.**
 
