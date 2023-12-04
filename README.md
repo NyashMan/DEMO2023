@@ -17,97 +17,62 @@ Step-by-step guide for DEMO 2023-2024| WIP
 ```
 su -
 toor
-nano /etc/hostname
-ISP
-Нажать: ctrl-x
-Нажать: y
+hostnamectl set-hostname ISP; exec bash
+нажать enter
 ```
+
+### **CLI**
 ```
-nano /etc/hosts
-127.0.1.1		ISP
-Нажать: ctrl-x
-Нажать: y
-reboot
+su -
+toor
+hostnamectl set-hostname CLI; exec bash
+нажать enter
 ```
 
 ### **HQ-R**
 ```
 su -
 toor
-nano /etc/hostname
-HQ-R
-Нажать: ctrl-x
-Нажать: y
-```
-```
-nano /etc/hosts
-127.0.1.1		HQ-R
-Нажать: ctrl-x
-Нажать: y
-reboot
+hostnamectl set-hostname HQ-R; exec bash
+нажать enter
 ```
 
 ### **HQ-SRV**
 ```
 su -
 toor
-nano /etc/hostname
-HQ-SRV
-Нажать: ctrl-x
-Нажать: y
+hostnamectl set-hostname ISP; exec bash
+нажать enter
 ```
-```
-nano /etc/hosts
-127.0.1.1		HQ-SRV
-Нажать: ctrl-x
-Нажать: y
-reboot
-```
+
 ### **BR-R**
 ```
 su -
 toor
-nano /etc/hostname
-BR-R
-Нажать: ctrl-x
-Нажать: y
+hostnamectl set-hostname BR-R; exec bash
+нажать enter
 ```
-```
-nano /etc/hosts
-127.0.1.1		BR-R
-Нажать: ctrl-x
-Нажать: y
-reboot
-```
+
 
 ### **BR-SRV**
 
 ```
 su -
 toor
-nano /etc/hostname
-BR-SRV
-Нажать: ctrl-x
-Нажать: y
-```
-```
-nano /etc/hosts
-127.0.1.1		BR-SRV
-Нажать: ctrl-x
-Нажать: y
-reboot
+hostnamectl set-hostname BR-SRV; exec bash
+нажать enter
 ```
 
 **b.	Рассчитайте IP-адресацию IPv4 и IPv6. Необходимо заполнить таблицу №1, чтобы эксперты могли проверить ваше рабочее место.**  
 **Таблица №1**  
-| Имя устройств  | IP |
-| ------------- | ------------- |
-| CLI  | 10.0.1.2/24 255.255.255.0  |
-| ISP | 10.0.1.1/24 255.255.255.0  |
-| HQ-R  | 192.168.0.1/24 255.255.255.0  |
-| HQ-SRV  | 10.0.0.2/26 255.255.255.192  |
-| BR-R  | 192.168.1.1/24 255.255.255.0  |
-| BR-SRV  | 10.0.2.2/28 255.255.255.240  |
+| Имя устройств  | IP | Примечание |
+| ------------- | ------------- | ------------- |
+| CLI  | 10.0.1.2/24 255.255.255.0  |ens33 to ISP |
+| ISP | 10.0.1.1/24 255.255.255.0  |ens33 - to CLI;  ens160 to HQ-R; ens224 to BR-R|
+| HQ-R  | 192.168.0.1/24 255.255.255.0  |ens192 - to ISP;  ens160 - to HQ  |
+| HQ-SRV  | 10.0.0.2/26 255.255.255.192  |ens33 to HQ-R  |
+| BR-R  | 192.168.1.1/24 255.255.255.0  |ens160 to BR;  ens33 to ISP  |
+| BR-SRV  | 10.0.2.2/28 255.255.255.240  |ens33 to BR-R  |
 | HQ-CLI  | 10.0.0.3/26 255.255.255.192  |
 | HQ-AD  | 10.0.0.4/26 255.255.255.192  |
 
