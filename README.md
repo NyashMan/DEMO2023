@@ -120,7 +120,7 @@ su -
 toor
 nano /etc/netowork/interfaces
 ```
-![image](https://github.com/NyashMan/DEMO2023/assets/1348639/b10ce1b6-ebc2-4f24-8f76-341152bcef49)
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/b10ce1b6-ebc2-4f24-8f76-341152bcef49)  
 **P.S. в дальнейшем на данонм хосте адресация будет выдаваться автоматически, через DHCP сервер.**
 
 ## **BR-R**
