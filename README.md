@@ -68,7 +68,9 @@ hostnamectl set-hostname BR-SRV; exec bash
 | Имя устройств  | IP | Примечание |
 | ------------- | ------------- | ------------- |
 | CLI  | 10.0.1.2/24 255.255.255.0  |ens33 to ISP |
-| ISP | 10.0.1.1/24 255.255.255.0  |ens33 - to CLI;  ens160 to HQ-R; ens224 to BR-R|
+| ISP | 10.0.1.1/24 255.255.255.0  |ens33 - to CLI|
+|  | 192.168.0.1/24 255.255.255.0  |ens160 to HQ-R|
+|  | 192.168.1.1/24 255.255.255.0  |ens224 to BR-R|
 | HQ-R  | 192.168.0.1/24 255.255.255.0  |ens192 - to ISP;  ens160 - to HQ  |
 | HQ-SRV  | 10.0.0.2/26 255.255.255.192  |ens33 to HQ-R  |
 | BR-R  | 192.168.1.1/24 255.255.255.0  |ens160 to BR;  ens33 to ISP  |
@@ -88,7 +90,38 @@ hostnamectl set-hostname BR-SRV; exec bash
 **Настройка FRR**  
 Настройку динамическое маршрутизации производим с помощью протокола **OSPF** – потому что…  
 
+**Для корректоной работы протокола динамической маршрутизации необходимо включить опцию forwarding на всех маршрутизаторах:  **
 ## **ISP**
+
+```
+su -
+toor
+nano /etc/sysctl.conf
+```
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/cb3edc27-d840-4207-a417-18741d71c650)
+
+```
+ctrl-x
+y
+sysctl -p
+```
+
+## **HQ-R**
+
+```
+su -
+toor
+nano /etc/sysctl.conf
+```
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/cb3edc27-d840-4207-a417-18741d71c650)
+
+```
+ctrl-x
+y
+sysctl -p
+```
+
+## **BR-R**
 
 ```
 su -
