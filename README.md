@@ -88,6 +88,58 @@ hostnamectl set-hostname BR-SRV; exec bash
 
 255.255.255.192 = /26
 
+## Настройка адресации  
+**Назначаем адресацию согласно ранее заполненной таблицы №1**  
+## **CLI**
+```
+su -
+toor
+nano /etc/netowork/interfaces
+```
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/61fcd7f3-0221-4887-a0a0-d992e6ed8ba0)
+
+## **ISP**
+```
+su -
+toor
+nano /etc/netowork/interfaces
+```
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/beec5a8d-5cd1-4eaa-b1b3-8f28c94ef9f8)
+
+## **HQ-R**
+```
+su -
+toor
+nano /etc/netowork/interfaces
+```
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/2080bde3-0c38-4f15-bc9f-b96b1aa98027)
+
+## **HQ-SRV**
+```
+su -
+toor
+nano /etc/netowork/interfaces
+```
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/b10ce1b6-ebc2-4f24-8f76-341152bcef49)
+**P.S. в дальнейшем на данонм хосте адресация будет выдаваться автоматически, через DHCP сервер.**
+
+## **BR-R**
+```
+su -
+toor
+nano /etc/netowork/interfaces
+```
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/9e5881f1-f6d9-46b1-92a0-a1dc045d42eb)
+
+## **BR-SRV**
+```
+su -
+toor
+nano /etc/netowork/interfaces
+```
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/e0e3d90c-7a19-427e-bda6-2e43170e915a)
+
+
 **2.	Настройте внутреннюю динамическую маршрутизацию по средствам FRR. Выберите и обоснуйте выбор протокола динамической маршрутизации из расчёта, что в дальнейшем сеть будет масштабироваться.**  
 **Настройка FRR**  
 Настройку динамическое маршрутизации производим с помощью протокола **OSPF** – потому что…  
