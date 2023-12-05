@@ -111,6 +111,7 @@ nano /etc/netowork/interfaces
 ```
 ctrl-x
 y
+systemctl restart networking
 ```
 ## **HQ-R**
 ```
@@ -122,6 +123,7 @@ nano /etc/netowork/interfaces
 ```
 ctrl-x
 y
+systemctl restart networking
 ```
 ## **HQ-SRV**
 ```
@@ -133,6 +135,7 @@ nano /etc/netowork/interfaces
 ```
 ctrl-x
 y
+systemctl restart networking
 ```  
 **P.S. в дальнейшем на данонм хосте адресация будет выдаваться автоматически, через DHCP сервер.**
 
@@ -146,6 +149,7 @@ nano /etc/netowork/interfaces
 ```
 ctrl-x
 y
+systemctl restart networking
 ```
 ## **BR-SRV**
 ```
@@ -157,6 +161,7 @@ nano /etc/netowork/interfaces
 ```
 ctrl-x
 y
+systemctl restart networking
 ```
 
 **2.	Настройте внутреннюю динамическую маршрутизацию по средствам FRR. Выберите и обоснуйте выбор протокола динамической маршрутизации из расчёта, что в дальнейшем сеть будет масштабироваться.**  
@@ -212,7 +217,6 @@ sysctl -p
 ## **HQ-R**
 
 ```
-apt install frr
 nano /etc/frr/daemons
 меняем строчку
 ospfd=no на строчку
@@ -223,20 +227,20 @@ systemctl restart frr
 vtysh
 conf t
 router ospf
+passive-interface default
 network 10.0.1.0/26 area 0
 network 192.168.0.0/24 area 0
 network 172.16.0.0/24 area 0
 int ens160
 ip ospf passive
-do write
 exit
+do write memory
 systemctl restart frr
 ```
 
 ## **BR-R**
 
 ```
-apt install frr
 nano /etc/frr/daemons
 меняем строчку
 ospfd=no на строчку
@@ -252,8 +256,8 @@ network 192.168.1.0/24 area 0
 network 172.16.0.0/24 area 0
 int ens160
 ip ospf passive
-do write
 exit
+do write memory
 systemctl restart frr
 ```
 
