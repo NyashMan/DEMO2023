@@ -423,8 +423,47 @@ systemctl restart nftables
 
 ### Модуль 2: Организация сетевого администрирования
 ## **Задание модуля 2**
-
-
+**5.  Сконфигурируйте веб-сервер LMS Apache на сервере BR-SRV:**
+```
+su -
+toor
+systemctl stop apache2.service
+docker container start moodledb
+docker container stoart moodle
+```
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/4df70712-786a-40a6-a4f3-d4339ead263a)  
+**a. На главной странице должен отражаться номер
+места**  
+Используя веб-браузер перейдите по ссылке  
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/8a6bc863-da9c-4c42-9bcd-22fc49a9f46c)
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/6e9b1a9d-1f03-41b8-83b5-62b4a1222c90)
+Используйте следующие данные для входа:
+```
+Login: user
+Password: bitnami
+```
+После успешного входа необходимо указать название вашего рабочего места (например 5)  
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/6e308e88-2d12-45aa-8b9b-4104b953acef)  
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/56536a54-5eb0-4e04-97b5-bcd64f896241)
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/003d57a5-17c9-4844-80a7-cad1f79e9506)
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/c08b03a7-9157-4bf0-aaaf-32e2fbb41e9d)
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/6bd61a7f-4791-4d96-b38f-8c2293dd321c)
+**b. Используйте базу данных mySQL**
+c. Создайте пользователей в соответствии с таблицей,
+пароли у всех пользователей «P@ssw0rd»
+| Пользователь  | Группа |
+| ------------- | ------------- |
+| Admin  | Admin  |
+| Manager1  | Manager  |
+| Manager2 | Manager  |
+| Manager3  | Manager  |
+| User1  | WS  |
+| User2  | WS  |
+| User3  | WS  |
+| User4  | WS  |
+| User5  | TEAM  |
+| User6  | TEAM  |
+| User7  | TEAM  |
 ### Модуль 3: Эксплуатация объектов сетевой инфраструктуры
 ## **Задание модуля 3:**
 **7. Между офисами HQ и BRANCH установите защищенный туннель, позволяющий осуществлять связь между регионами с применением внутренних адресов.**
