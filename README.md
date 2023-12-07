@@ -447,10 +447,11 @@ Password: bitnami
 ![image](https://github.com/NyashMan/DEMO2023/assets/1348639/56536a54-5eb0-4e04-97b5-bcd64f896241)
 ![image](https://github.com/NyashMan/DEMO2023/assets/1348639/003d57a5-17c9-4844-80a7-cad1f79e9506)
 ![image](https://github.com/NyashMan/DEMO2023/assets/1348639/c08b03a7-9157-4bf0-aaaf-32e2fbb41e9d)
-![image](https://github.com/NyashMan/DEMO2023/assets/1348639/6bd61a7f-4791-4d96-b38f-8c2293dd321c)
-**b. Используйте базу данных mySQL**
-c. Создайте пользователей в соответствии с таблицей,
-пароли у всех пользователей «P@ssw0rd»
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/6bd61a7f-4791-4d96-b38f-8c2293dd321c)  
+**b. Используйте базу данных mySQL**  
+Используется БД mySQL под управление MariaDB
+**c. Создайте пользователей в соответствии с таблицей,
+пароли у всех пользователей «P@ssw0rd»**
 | Пользователь  | Группа |
 | ------------- | ------------- |
 | Admin  | Admin  |
