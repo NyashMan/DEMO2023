@@ -465,7 +465,7 @@ Password: bitnami
 | User5  | TEAM  |
 | User6  | TEAM  |
 | User7  | TEAM  |  
-## **HQ-SRV** 
+## **BR-SRV** 
 ```
 mariadb -h 172.18.0.2 -u root -p
 toor
