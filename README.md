@@ -75,7 +75,7 @@ hostnamectl set-hostname BR-SRV; exec bash
 |   | 10.0.0.1/24 255.255.255.0  |ens160 - to HQ  |
 | HQ-SRV  | 10.0.0.2/26 255.255.255.192  |ens33 to HQ-R  |
 | BR-R  | 192.168.1.2/24 255.255.255.0  |ens33 to ISP  |
-|   | 10.0.2.1/28 255.255.255.0  |ens160 to BR  |
+|   | 10.0.2.1/28 255.255.255.240  |ens160 to BR  |
 | BR-SRV  | 10.0.2.2/28 255.255.255.240  |ens33 to BR-R  |
 | HQ-CLI  | 10.0.0.3/26 255.255.255.192  |
 | HQ-AD  | 10.0.0.4/26 255.255.255.192  |
@@ -251,7 +251,7 @@ systemctl restart frr
 vtysh
 conf t
 router ospf
-network 10.0.2.0./26 area 0
+network 10.0.2.0./28 area 0
 network 192.168.1.0/24 area 0
 network 172.16.0.0/24 area 0
 int ens160
