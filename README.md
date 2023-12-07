@@ -429,7 +429,7 @@ su -
 toor
 systemctl stop apache2.service
 docker container start moodledb
-docker container stoart moodle
+docker container start moodle
 ```
 ![image](https://github.com/NyashMan/DEMO2023/assets/1348639/4df70712-786a-40a6-a4f3-d4339ead263a)  
 **a. На главной странице должен отражаться номер
