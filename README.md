@@ -228,7 +228,7 @@ vtysh
 conf t
 router ospf
 passive-interface default
-network 10.0.1.0/26 area 0
+network 10.0.0.0/26 area 0
 network 192.168.0.0/24 area 0
 network 172.16.0.0/24 area 0
 int ens160
