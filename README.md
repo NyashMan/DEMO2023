@@ -436,8 +436,8 @@ docker container start moodle
 места**  
 Используя веб-браузер перейдите по ссылке  
 ![image](https://github.com/NyashMan/DEMO2023/assets/1348639/8a6bc863-da9c-4c42-9bcd-22fc49a9f46c)
-![image](https://github.com/NyashMan/DEMO2023/assets/1348639/6e9b1a9d-1f03-41b8-83b5-62b4a1222c90)
-Используйте следующие данные для входа:
+![image](https://github.com/NyashMan/DEMO2023/assets/1348639/6e9b1a9d-1f03-41b8-83b5-62b4a1222c90)  
+Используйте следующие данные для входа:  
 ```
 Login: user
 Password: bitnami
