@@ -336,7 +336,7 @@ P@ssw0rd
 ## **BR-R**
 
 ```
-useradd Brancadmin
+useradd Branchadmin
 passwd Branchadmin
 P@ssw0rd
 P@ssw0rd
