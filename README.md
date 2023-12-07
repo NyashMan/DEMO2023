@@ -464,7 +464,47 @@ Password: bitnami
 | User4  | WS  |
 | User5  | TEAM  |
 | User6  | TEAM  |
-| User7  | TEAM  |
+| User7  | TEAM  |  
+## **HQ-SRV** 
+```
+mariadb -h 172.18.0.2 -u root -p
+toor
+CREATE USER 'Admin'@'localhost' IDENTIFIED BY 'P@ssw0rd';
+GRANT Admin TO 'Admin'@'localhost';
+
+CREATE USER 'Manager1'@'localhost' IDENTIFIED BY 'P@ssw0rd';
+GRANT Manager TO 'Manager1'@'localhost';
+
+CREATE USER 'Manager2'@'localhost' IDENTIFIED BY 'P@ssw0rd';
+GRANT Manager TO 'Manager2'@'localhost';
+
+CREATE USER 'Manager3'@'localhost' IDENTIFIED BY 'P@ssw0rd';
+GRANT Manager TO 'Manager3'@'localhost';
+
+CREATE USER 'User1'@'localhost' IDENTIFIED BY 'P@ssw0rd';
+GRANT WS TO 'User1'@'localhost';
+
+CREATE USER 'User2'@'localhost' IDENTIFIED BY 'P@ssw0rd';
+GRANT WS TO 'User2'@'localhost';
+
+CREATE USER 'User3'@'localhost' IDENTIFIED BY 'P@ssw0rd';
+GRANT WS TO 'User3'@'localhost';
+
+CREATE USER 'User4'@'localhost' IDENTIFIED BY 'P@ssw0rd';
+GRANT WS TO 'User4'@'localhost';
+
+CREATE USER 'User5'@'localhost' IDENTIFIED BY 'P@ssw0rd';
+GRANT TEAM TO 'User5'@'localhost';
+
+CREATE USER 'User6'@'localhost' IDENTIFIED BY 'P@ssw0rd';
+GRANT TEAM TO 'User6'@'localhost';
+
+CREATE USER 'User7'@'localhost' IDENTIFIED BY 'P@ssw0rd';
+GRANT TEAM TO 'User7'@'localhost';
+
+quit;
+```
+
 ### Модуль 3: Эксплуатация объектов сетевой инфраструктуры
 ## **Задание модуля 3:**
 **7. Между офисами HQ и BRANCH установите защищенный туннель, позволяющий осуществлять связь между регионами с применением внутренних адресов.**
