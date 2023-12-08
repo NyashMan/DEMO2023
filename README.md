@@ -435,6 +435,7 @@ systemctl restart nftables
 
 **Зона branch.work**  
 | Имя | Тип записи | Адрес |
+| :---         |     :---:      |          ---: |
 | br-r.branch.work   | A, PTR     | IP-адрес    |
 | br-srv.branc.work   | A    | IP-адрес    |  
 
