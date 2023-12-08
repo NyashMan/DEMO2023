@@ -437,7 +437,7 @@ systemctl restart nftables
 | Имя | Тип записи | Адрес |
 | :---         |     :---:      |          ---: |
 | br-r.branch.work   | A, PTR     | IP-адрес    |
-| br-srv.branc.work   | A    | IP-адрес    |  
+| br-srv.branch.work   | A, PTR     | IP-адрес    |  
 
 **5.  Сконфигурируйте веб-сервер LMS Apache на сервере BR-SRV:**
 ```
