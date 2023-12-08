@@ -41,7 +41,7 @@ hostnamectl set-hostname HQ-R; exec bash
 ```
 su -
 toor
-hostnamectl set-hostname ISP; exec bash
+hostnamectl set-hostname HQ-SRV; exec bash
 нажать enter
 ```
 
